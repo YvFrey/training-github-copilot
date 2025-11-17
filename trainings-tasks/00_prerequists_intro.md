@@ -22,7 +22,7 @@ Please ensure the following items are verified *before* the start of the hands-o
 | :--- | :--- | :--- |
 | **1. GitHub Copilot License** | Required | Ensure you have an active **Copilot Pro** or **Copilot Business/Enterprise** subscription linked to your GitHub account. |
 | **2. Visual Studio Code** | Version **1.106.0**+ | Please ensure you have the **latest stable version** of VS Code installed to guarantee all agent and chat features are available. |
-| **3. Required Extensions** | Installed | **GitHub Copilot Extension** ( consolidated extension) and **GitHub Pull Requests Extension**. |
+| **3. Required Extensions** | Installed | **GitHub Copilot Extension** and **GitHub Pull Requests Extension**. |
 | **4. `uv` Utility** | Installed | The `uv` utility is required for fast environment and dependency management. |
 | **5. Git Configuration** | Ready | Ensure your local `git` client is configured with your correct user name and email. |
 
@@ -36,8 +36,9 @@ Follow these steps to set up your environment and verify the application is runn
 Execute these commands sequentially in your project root directory. This installs necessary tools, sets up dependencies, and starts the server.
 
 ```bash
-# INSTALL UV, SYNC DEPS, & RUN APP HERE
-# (e.g., pip install uv, uv sync, uv run uvicorn app.main:app)
+pip install uv
+uv sync
+uv run uvicorn app.main:app
 ```
 
 *Note: The app should be running at `http://127.0.0.1:8000`.*
