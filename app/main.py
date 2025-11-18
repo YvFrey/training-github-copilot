@@ -1,8 +1,5 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-
-from app.models import OrderResponse
-
 # Initializing FastAPI
 app = FastAPI(title="Copilot Training App")
 
@@ -12,7 +9,7 @@ class Item(BaseModel):
     price: float
     quantity: int
 
-def calculate_total(price: float, quantity: int) -> float:
+def calculate_total(price: float, quantity: int) -> int:
     # BUG: Logic is incorrect. Should be price * quantity * 1.10
     return (price + quantity) + 1.10 
 
