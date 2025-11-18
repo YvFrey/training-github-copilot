@@ -1,16 +1,13 @@
-# 🚀 GitHub Copilot Engineering Training: Flow & Autonomy
+# 🚀 AI Engineering Enablement Training: GitHub Copilot
 
-This training equips engineering peers to move beyond basic code completion and command GitHub Copilot's advanced features—mastering contextual guidance, agentic workflows, and autonomous delegation to accelerate code delivery and quality.
-
+#### This hands-on training helps engineers move beyond basic code completion by teaching practical use of GitHub Copilot for contextual guidance, agentic workflows, and safe automation to accelerate delivery and improve code quality.
 ---
 
 ## 🎯 Module 00: Prerequisites and Developer Responsibility
 
-### 📚 Training Goal and Context
+### 📚 Goal
 
-This is an **interactive classroom training** session designed to move engineers beyond basic code completion and into **advanced, agentic workflows** to **accelerate speed** and **predictable code quality**.
-
-The training is based on a **simple FastAPI application**, manageable by any engineer familiar with foundational programming concepts. We encourage everyone to **explore the capabilities and limitations of GitHub Copilot** in a high-trust, safe environment.
+The training is based on a **simple FastAPI application**, manageable by any engineer familiar with foundational programming concepts. We expect everyone to **explore the capabilities and limitations of GitHub Copilot**. You'll learn how to prompt effectively, use agentic features safely, and validate generated code.
 
 We encourage you to discuss actively with your colleagues during the session, and **manifest your new learned skills** by continuing to practice the concepts outside of the classroom.
 
@@ -18,55 +15,48 @@ We encourage you to discuss actively with your colleagues during the session, an
 
 Please ensure the following items are verified *before* the start of the hands-on session.
 
-| Prerequisite | Status | Notes |
-| :--- | :--- | :--- |
-| **1. GitHub Copilot License** | Required | Ensure you have an active **Copilot Pro** or **Copilot Business/Enterprise** subscription linked to your GitHub account. |
-| **2. Visual Studio Code** | Version **1.106.0**+ | Please ensure you have the **latest stable version** of VS Code installed to guarantee all agent and chat features are available. |
-| **3. Required Extensions** | Installed | **GitHub Copilot Extension** and **GitHub Pull Requests Extension**. |
-| **4. `uv` Utility** | Installed | The `uv` utility is required for fast environment and dependency management. |
-| **5. Git Configuration** | Ready | Ensure your local `git` client is configured with your correct user name and email. |
+-  **GitHub Copilot License**: Copilot Pro or Business/Enterprise tied to your GitHub account
+- **Visual Studio Code**: Recommended: latest stable VS Code to ensure agent/chat features are available
+- **Required Extensions**: Install: GitHub Copilot and GitHub Pull Requests & Issues extensions
+- **`uv` Package Manager** : The `uv` utility is required for fast environment and dependency management
+- **Git Configuration**: Ensure your local `git` client is configured with your correct user name and email
 
 ---
 
 ## 🚀 Getting Started: Running the FastAPI App
 
-Follow these steps to set up your environment and verify the application is running correctly.
-
-### 1. Fully Set Up and Run Application
-Execute these commands sequentially in your project root directory. This installs necessary tools, sets up dependencies, and starts the server.
+Run the following in the project root to install `uv`, sync the environment, and start the app locally. These commands assume you have a Python environment and `pip` available.
 
 ```bash
-pip install uv
+cd app
+pip install --upgrade uv
 uv sync
-uv run uvicorn app.main:app
+uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-*Note: The app should be running at `http://127.0.0.1:8000`.*
-
-### 2. Verify Copilot & Swagger UI
-Confirm the AI is active and the application is accessible.
-
-* **Verify Copilot:** Open the Copilot Chat panel and ask a simple question like: `@copilot What is the main purpose of this repository?` A coherent, project-aware response confirms the extension is active and authenticated.
-* **Verify Swagger:** Open your web browser and navigate to the Swagger documentation endpoint: `http://127.0.0.1:8000/docs`.
+The app will normally be available at: http://127.0.0.1:8000
 
 ---
 
-### 🗺️ Reflective Learning Structure
+### Verify Copilot and API docs
 
-We encourage continuous learning. Between major steps, **take a moment to reflect** on the new techniques and consider how they can be immediately **applied to your current projects**.
-
-* **Module I:** Context and Control (Learning to command the AI with precision)
-* **Module II:** Dynamic Interaction (Mastering completions, Inline Chat, and Prompt Files)
-* **Module III:** Version Control and Quality (Integrating Copilot into SCM review and commit flows)
-* **Module IV:** Testing Framework (Establishing automated, policy-driven testing)
-* **Module V:** Agentic Workflow and Customization (Delegating complex, iterative tasks to the autonomous Coding Agent)
+- Verify Copilot: Open the Copilot Chat panel in VS Code and ask a project-aware question such as: "What is the main purpose of this repository?" A coherent response indicates Copilot is active and has access to the workspace.
+- Verify Swagger UI: Open http://127.0.0.1:8000/docs in your browser to view the automatically generated API documentation.
 
 ---
 
-### 🛡️ Developer Responsibility Mandate
+## 🗺️ Learning path (modules)
 
-The human developer remains the final authority.
+- Module I — Context & Control: precise prompting and workspace context
+- Module II — Dynamic Interaction: completions, Inline Chat, and prompt files
+- Module III — Version Control & Quality: integrating Copilot into SCM and reviews
+- Module IV — Testing Framework: automating tests and policy checks
+- Module V — Agentic Workflows: delegating and supervising autonomous agents
 
-> As an AI coding tool, Copilot provides suggestions based on learned patterns, but it does not guarantee correctness, optimality, or security. **The developer remains the final authority.** You are responsible for **rigorously reviewing, testing, and validating** all code generated by Copilot before deployment, ensuring compliance with all security standards. **Always be skeptical of generated code.**
+---
+
+## 🛡️ Developer Responsibility Mandate
+
+As an AI coding tool, Copilot provides suggestions based on learned patterns, but it does not guarantee correctness, optimality, or security. **The developer remains the final authority.** You are responsible for **rigorously reviewing, testing, and validating** all code generated by Copilot before deployment, ensuring compliance with all security standards. **Always be skeptical of generated code.**
 
 ---

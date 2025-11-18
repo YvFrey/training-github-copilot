@@ -1,71 +1,69 @@
-# 🎯 Module II: Dynamic Interaction (Chat, Inline, and Completions)
+## 🎯 Module II: Dynamic Interaction via Chat Panel, Inline Chat, and Code Completions
 
-**Goal:**  
-Learn to **switch between Copilot’s interaction modes** to match the task at hand and maximize developer productivity. Copilot provides three main “thinking modes”:
+### 📚 Goal: Learn to switch between Copilot’s interaction modes and channels to maximize developer productivity.
 
-- **ASK Mode** → Reasoning, explanations, conceptual questions  
-- **EDIT Mode** → Rewrite or refactor selected code  
-- **AGENT Mode** → Multi-step, autonomous workflows  
+Copilot provides three primary interaction channels:
 
-Also available:
+* **Code Completions** → Quick scaffolding and filling in code as you type.
+* **Inline Chat (`Ctrl/Cmd + I`)** → Focused, in-place edits and actions on selected code.
+* **Chat Panel** → Global reasoning, architectural questions, and multi-file context.
+* **Copilot CLI** → Shell/Terminal Interaction for generating and executing commands.
 
-- **Slash Commands** (`/fix`, `/docs`, `/explain`) → Fast, deterministic local edits  
-- **Environment Agents** (`@workspace`, `@terminal`, `@vscode`) → Bring context from project and editor  
-- **Code Completions** → Quick scaffolding inside the editor  
-
-Switching modes intentionally improves speed, accuracy, and clarity.
-
----
+Switching modes and channels intentionally improves speed, accuracy, and clarity.
 
 ## Exercises
 
-| Step | Focus | Copilot Feature | Instructions |
-| :--- | :--- | :--- | :--- |
-| **2.1** | **Multi-Step Generation** | **Code Completions & Inline Comment** | Open `app/main.py`. Above the `/status` route, type: `# Add a new POST route at /item/create that accepts the existing 'Item' Pydantic model. The route handler must be 'async def' and should immediately return a 201 Created status code and the received item JSON.` Use the Command Palette to search "Copilot: Open Completions Panel" and iterate through suggestions. **Accept the suggested block and delete the comment afterward.** |
-| **2.2** | **Focused Refactoring** | **Inline Chat (`/fix`)** | Select the `post_calculate_order` function. Open **Inline Chat** (`Ctrl/Cmd + I`) and type: `/fix this route to validate and return the calculated total using the 'OrderResponse' Pydantic model.` |
-| **2.3** | **Fixing Code Logic** | **Chat (`/fix`)** | Select the entire **`calculate_total`** function. Use the main **Copilot Chat** panel or **Inline Chat** to: `/fix the bug of the function.` |
-| **2.4** | **Explaining Code** | **Chat Panel (`/explain`)** | Select the `calculate_total` function. Use **Copilot Chat** and type: `/explain this function to a junior developer. Focus on the math and correct return type, referencing its usage in the '/calculate' endpoint.` |
-| **2.5** | **Inline Explanation (Speed)** | **Inline Chat (Selection)** | Select the `create_item` function. Use Inline Chat (`Ctrl/Cmd + I`) and prompt: `Explain this code in a single sentence.` Observe how it provides an in-place, focused explanation. |
-| **2.6** | **One-Click Documentation** | **Inline Chat (`/docs`)** | Select the body of `get_status`. Use Inline Chat and type: `/docs add a Google-style docstring explaining the function’s purpose and return value.` |
-| **2.7** | **Custom Prompt File Creation** | **Prompt Files (`.github/prompts`)** | Review `security-audit.prompt.md`. Select `create_item` and run the prompt: `/security-audit`. Create your own prompt (`my-use-case.prompt.md`) for a repetitive task and validate by running it in the chat. |
+| Step | Feature | Instructions |
+| :--- | :--- | :--- |
+| **2.1** | **Code Completions** | Open `app/main.py`. Above the `/status` route, type: `# Add a new POST route /item/create that accepts the existing 'Item' Pydantic model. The route handler should immediately return the received item as JSON.` Use the Command Palette to search "Copilot: Open Completions Panel" and iterate through suggestions. **Accept the suggested block and delete the comment afterward.** |
+| **2.2** | **Inline Chat (`/fix`)** | Select the `post_calculate_order` function. Open **Inline Chat** and type: `/fix this route to validate and return the calculated total using the 'OrderResponse' Pydantic model.` |
+| **2.3** | **Chat Panel (`/fix`)** | Select the entire **`calculate_total`** function. Use the main **Copilot Chat** panel and prompt: `/fix the bug of the function.` |
+| **2.4** | **Chat Panel (`/explain`)** | Select the `calculate_total` function. Use **Copilot Chat** and type: `/explain this function to a junior developer. Focus on the math and correct return type, referencing its usage in the '/calculate' endpoint.` |
+| **2.5** | **Inline Chat (Selection)** | Select the `create_item` function. Use Inline Chat and prompt: `Explain this code in a single sentence.` Observe how it provides an in-place, focused explanation. |
+| **2.6** | **Mode Comparison** | Select the **entire `calculate_total` function** after swtching the return type to int. In the main **Copilot Chat** panel, submit the exact same prompt three times, using a different mode prefix each time. Use the simple request: **`Change the return type of this function.`** Switch between **ASK Mode, EDIT Mode** and **AGENT Mode** and observe the different behavior. |
+| **2.7** | **Inline Chat (`/docs`)** | Select the body of `get_status`. Use Inline Chat and type: `/docs add a Google-style docstring explaining the function’s purpose and return value.` |
+| **2.8** | **Inline Terminal Chat (`@terminal`)** | **Open your terminal** and press **`Command/Ctrl + I`** to launch the inline chat. Type: `@terminal I need to run my FastAPI application using uvicorn with hot-reloading` The inline agent generates the executable command in the shell. |
+| **2.9** | **Custom Prompt File Creation** | Review `security-audit.prompt.md`. Select `create_item` and run the prompt: `/security-audit`. Create your own prompt (`my-use-case.prompt.md`) for a repetitive task and validate by running it in the chat. |
 
 ---
 
 ### 📚 Inspiration: Designing Custom Prompt Files
 
-To maximize Prompt Files, turn repetitive tasks into structured commands.  
-[GitHub Docs: Your First Prompt File](https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/your-first-prompt-file)
+Prompt Files are how you turn repetitive workflow tasks into standard, reusable commands. This prevents lengthy, complex instructions from being typed repeatedly and ensures standardization for tasks like documentation or custom code audits across the entire codebase. [GitHub Docs: Your First Prompt File](https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/your-first-prompt-file)
 
 ---
 
-# 🧠 Lesson Learned: Dynamic Interaction
+### 🧠 Lesson Learned: Dynamic Interaction and Agent Capabilities
 
-Dynamic interaction is about **choosing the right mode** and using the proper context:
+The most effective way to use Copilot is by **choosing the right mode** and understanding how its agents provide context. **Change the mode → change the context → change the result.**
 
-### ⚡ 1. Completions – “Instant Code Generation”
-- Quick scaffolding, small functions  
-- Triggered by natural-language comments above or in code  
+#### 💡 1. Core Thinking Modes
 
-### 🎯 2. Slash Commands – “Power Tools”
-- `/fix`, `/docs`, `/explain`  
-- Fast, deterministic edits on **selected code**  
+All interactions fall into one of three conceptual modes, dictating the AI's response style:
 
-### 🌍 3. Environment Agents – “External Sensors”
-- `@workspace` → project structure, files, dependencies  
-- `@terminal` → commands (git, docker, curl, uv)  
-- `@vscode` → debugging context and editor state  
-- Do **not** modify code; provide context  
+* **ASK Mode** → Reasoning, explanations, conceptual questions (e.g., asking `/explain`).
+* **EDIT Mode** → Rewriting, fixing, or refactoring existing, selected code (e.g., using `/fix`).
+* **AGENT Mode** → Multi-step, autonomous workflows that coordinate actions or external tools (e.g., using `@workspace`).
 
-### ✏️ 4. Inline Chat – “Local Precision”
-- Acts directly on selected lines  
-- Best for small refactors, documentation, or quick fixes  
+#### ⚡ 2. Interaction Channels and Focus
 
-### 🧩 5. Chat Panel – “Global Reasoning”
-- Has access to **multi-file context** and workspace insights  
-- Use for explanations, architectural reasoning, or multi-step instructions  
+| Channel | Focus | Key Use Case |
+| :--- | :--- | :--- |
+| **Code Completions** | Instant, code-as-you-type | Quick scaffolding and small function generation. |
+| **Inline Chat** | **Local Precision** | Small refactors, documentation (`/docs`), or quick fixes (`/fix`) on selected code. |
+| **Chat Panel** | **Global Reasoning** | Architectural questions, multi-file context, and complex explanations. |
+
+#### 🌍 3. Environment Agents and Slash Commands
+
+This layer defines the scope of the action, whether it’s code or a command.
+
+* **Slash Commands** (`/fix`, `/docs`, `/explain`): **Power Tools** for fast, deterministic edits or actions on **selected code**.
+* **Environment Agents:** **External Sensors** that connect the AI to your development environment.
+    * `@workspace`: Queries project structure, files, and dependencies.
+    * `@terminal`: Generates commands for tools like Git, Docker, and shell utilities.
+    * `@vscode`: Accesses debugging context and editor state (e.g., problems panel).
 
 ---
 
 ### ⭐ Key Insight: Context = Results
-When Copilot gives unexpected output:  
-**Change the mode → change the context → change the result.**
+When Copilot gives unexpected output: **Change the mode → change the context → change the result.**
