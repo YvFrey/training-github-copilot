@@ -17,8 +17,8 @@ Please ensure the following items are verified *before* the start of the hands-o
 
 -  **GitHub Copilot License**: Copilot Pro or Business/Enterprise tied to your GitHub account
 - **Visual Studio Code**: Recommended: latest stable VS Code to ensure agent/chat features are available
-- **Required Extensions**: Install: GitHub Copilot and GitHub Pull Requests & Issues extensions
-- **`uv` Package Manager** : The `uv` utility is required for fast environment and dependency management
+- **Required Extensions**: Install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Pull Requests & Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extensions in VS Code
+-  **`uv` Package Manager**: The `uv` utility is required for fast environment and dependency management. Install from the official guide: [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
 - **Git Configuration**: Ensure your local `git` client is configured with your correct user name and email
 
 ---
@@ -34,7 +34,7 @@ uv sync
 uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-The app will normally be available at: http://127.0.0.1:8000
+The Swagger Userinterface will now be available at: http://127.0.0.1:8000/docs
 
 ---
 

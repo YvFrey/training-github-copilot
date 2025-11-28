@@ -15,27 +15,27 @@ Switching modes and channels intentionally improves speed, accuracy, and clarity
 
 | Step | Feature | Instructions |
 | :--- | :--- | :--- |
-| **2.1** | **Code Completions** | Open `app/main.py`. Above the `/status` route, type: `# Add a new POST route /item/create that accepts the existing 'Item' Pydantic model. The route handler should immediately return the received item as JSON.` Use the Command Palette to search "Copilot: Open Completions Panel" and iterate through suggestions. **Accept the suggested block and delete the comment afterward.** |
-| **2.2** | **Inline Chat (`/fix`)** | Select the `post_calculate_order` function. Open **Inline Chat** and type: `/fix this route to validate and return the calculated total using the 'OrderResponse' Pydantic model.` |
-| **2.3** | **Chat Panel (`/fix`)** | Select the entire **`calculate_total`** function. Use the main **Copilot Chat** panel and prompt: `/fix the bug of the function.` |
-| **2.4** | **Chat Panel (`/explain`)** | Select the `calculate_total` function. Use **Copilot Chat** and type: `/explain this function to a junior developer. Focus on the math and correct return type, referencing its usage in the '/calculate' endpoint.` |
-| **2.5** | **Inline Chat (Selection)** | Select the `create_item` function. Use Inline Chat and prompt: `Explain this code in a single sentence.` Observe how it provides an in-place, focused explanation. |
-| **2.6** | **Mode Comparison** | Select the **entire `calculate_total` function** after swtching the return type to int. In the main **Copilot Chat** panel, submit the exact same prompt three times, using a different mode prefix each time. Use the simple request: **`Change the return type of this function.`** Switch between **ASK Mode, EDIT Mode** and **AGENT Mode** and observe the different behavior. |
-| **2.7** | **Inline Chat (`/docs`)** | Select the body of `get_status`. Use Inline Chat and type: `/docs add a Google-style docstring explaining the function’s purpose and return value.` |
-| **2.8** | **Inline Terminal Chat (`@terminal`)** | **Open your terminal** and press **`Command/Ctrl + I`** to launch the inline chat. Type: `@terminal I need to run my FastAPI application using uvicorn with hot-reloading` The inline agent generates the executable command in the shell. |
-| **2.9** | **Custom Prompt File Creation** | Review `security-audit.prompt.md`. Select `create_item` and run the prompt: `/security-audit`. Create your own prompt (`my-use-case.prompt.md`) for a repetitive task and validate by running it in the chat. |
+| **2.1** | **Code Completions** | 1. In `app/main.py` above the `/status` route **type:** `# Add a new POST route /item/create that accepts the existing 'Item' Pydantic model. The route handler should immediately return the received item as JSON.`  <br>2. Open `Copilot: Open Completions Panel` and iterate through suggestions. Once accepted ensure the comment is deleted. <br> **Hint:** If you don't know how to open the right tool use `@vscode` agent.|
+| **2.2** | **Inline Chat (`/fix`)** | 1. **Select**  the `post_calculate_order` function. <br>2. **Inline Chat**: `/fix this route to validate and return the calculated total using the 'OrderResponse' Pydantic model.` |
+| **2.3** | **Chat Panel (`/fix`)** | 1. **Select** the entire **`calculate_total`** function.  <br>2. Chat Panel:** `/fix the bug of the function.` |
+| **2.4** | **Chat Panel (`/explain`)** | 1. **Select**  the `calculate_total` function. <br>2.Chat Panel: Ask:** `/explain this function to a junior developer. Focus on the math and correct return type, referencing its usage in the '/calculate' endpoint.` |
+| **2.5** | **Inline Chat (Selection)** | 1. **Select** the `create_item` function. <br>2. **Inline Chat**: `Explain this code in a single sentence.` Observe how it provides an in-place, focused explanation. |
+| **2.6** | **Mode Comparison** | 1. **Select** the **entire `calculate_total` function** after swtching the return type to int. <br>2. **Chat Panel:** Submit three times the exact same prompt: `Change the return type of this function.`. Switch between **ASK Mode, EDIT Mode** and **AGENT Mode** and observe the different behavior. |
+| **2.7** | **Inline Chat (`/docs`)** | 1. **Select** the body of `get_status`. <br>2. **Inline Chat**: `/docs add a Google-style docstring explaining the function’s purpose and return value.` |
+| **2.8** | **Inline Terminal (`@terminal`)** | 1. **Open your terminal** and press **`Command/Ctrl + I`** to launch the inline chat. <br>2. **Inline Chat:** `I need to run my FastAPI application using uvicorn with hot-reloading`. Observe how it picks up the terminal agent natively. |
+| **2.9** | **Custom Prompt** | 1. **Review** `security-audit.prompt.md`. **Select** `create_item` in `app/main.py` and run the prompt: `/security-audit`. <br>2. **Create** your own prompt (`my-use-case.prompt.md`). Think about a repetitive task/prompt during your daily coding. Validate the output and refine the prompt. |
 
 ---
 
 ### 📚 Inspiration: Designing Custom Prompt Files
-
-Prompt Files are how you turn repetitive workflow tasks into standard, reusable commands. This prevents lengthy, complex instructions from being typed repeatedly and ensures standardization for tasks like documentation or custom code audits across the entire codebase. [GitHub Docs: Your First Prompt File](https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/your-first-prompt-file)
+ 
+Prompt Files are how you turn repetitive workflow tasks into standard, reusable commands. This prevents lengthy, complex instructions from being typed repeatedly and ensures standardization for tasks like documentation or custom code audits across the entire codebase. <br> [GitHub Docs: Your First Prompt File](https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/your-first-prompt-file)
 
 ---
 
 ### 🧠 Lesson Learned: Dynamic Interaction and Agent Capabilities
 
-The most effective way to use Copilot is by **choosing the right mode** and understanding how its agents provide context. **Change the mode → change the context → change the result.**
+The most effective way to use Copilot is by **choosing the right mode** and understanding how to provide and switch context: **Change the mode → change the context → change the result.**
 
 #### 💡 1. Core Thinking Modes
 
@@ -43,27 +43,26 @@ All interactions fall into one of three conceptual modes, dictating the AI's res
 
 * **ASK Mode** → Reasoning, explanations, conceptual questions (e.g., asking `/explain`).
 * **EDIT Mode** → Rewriting, fixing, or refactoring existing, selected code (e.g., using `/fix`).
-* **AGENT Mode** → Multi-step, autonomous workflows that coordinate actions or external tools (e.g., using `@workspace`).
+* **AGENT Mode** → Multi-step workflows that coordinate actions or external tools.
 
 #### ⚡ 2. Interaction Channels and Focus
 
 | Channel | Focus | Key Use Case |
 | :--- | :--- | :--- |
-| **Code Completions** | Instant, code-as-you-type | Quick scaffolding and small function generation. |
+| **Code Completions** | **Instant** | Quick scaffolding and small function generation. |
 | **Inline Chat** | **Local Precision** | Small refactors, documentation (`/docs`), or quick fixes (`/fix`) on selected code. |
 | **Chat Panel** | **Global Reasoning** | Architectural questions, multi-file context, and complex explanations. |
-
-#### 🌍 3. Environment Agents and Slash Commands
-
-This layer defines the scope of the action, whether it’s code or a command.
-
-* **Slash Commands** (`/fix`, `/docs`, `/explain`): **Power Tools** for fast, deterministic edits or actions on **selected code**.
-* **Environment Agents:** **External Sensors** that connect the AI to your development environment.
-    * `@workspace`: Queries project structure, files, and dependencies.
-    * `@terminal`: Generates commands for tools like Git, Docker, and shell utilities.
-    * `@vscode`: Accesses debugging context and editor state (e.g., problems panel).
+| **Terminal/CLI** | **Command Execution** | Generating and executing commands for Git, Docker, and shell utilities. |
 
 ---
 
 ### ⭐ Key Insight: Context = Results
-When Copilot gives unexpected output: **Change the mode → change the context → change the result.**
+**Change the mode → change the context → change the result.**
+
+The ultimate insight is that **the input channel acts as the primary router** for your query, dictating which specialized agent or tool handles the request.
+
+1.  **Channel is the Router:** The channel you use (Inline Chat, Terminal, or Chat Panel) is the first factor that determines the AI's scope and focus.
+2.  **Implicit Routing:** The system automatically invokes the required agent based on context (e.g., **Inline Chat inside the terminal automatically routes the request to the `@terminal` Agent**). This means you don't always need to explicitly type the agent tag.
+3.  **Efficiency:** The most effective workflow combines these factors efficiently. The ultimate goal is to find the fastest way to get a reliable result. If you prefer typing commands over clicking UI elements, sticking to **Slash Commands** and **Context Variables** is a great strategy.
+4.  **Personal Preference:** Remember that finding the 'best' interaction channel is ultimately a matter of **personal workflow preference**; it's perfectly fine and even recommended to stick with the methods and settings that you find most efficient.
+
