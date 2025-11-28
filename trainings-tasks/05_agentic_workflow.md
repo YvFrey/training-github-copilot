@@ -9,7 +9,7 @@ The **Copilot Coding Agent** `@copilot` is the next evolution in AI-assisted cod
 
 | Step | Feature | Instructions |
 | :--- | :--- | :--- |
-| **5.1** | **Prepare the Error and Profile** | **Action:** 1. Review the contents of the custom agent file: **`.github/agents/MypyFixer.md`**. 2. Check for any mypy errors but do not fix. |
+| **5.1** | **Prepare the Error and Profile** | **Action:** 1. Review the contents of the custom agent file: **`.github/agents/MypyFixer.md`**. 2. Check for any mypy errors but do not fix. | <- I think we need to add more info in here, for example: 1st install mypy, 2nd run "mypy ."
 | **5.2** | **Delegate Task via GitHub UI** | **Workflow:** 1. Go to your repository's **Issues** tab on GitHub. 2. Create a new Issue titled: **`@copilot Request: Fix All Outstanding Mypy Errors of the App`**. 3. **Assign** this new issue to the **`@copilot`** agent. 4. Use the custom agent profile dropdown to select **`MypyFixer`**. |
 | **5.3** | **Delegate Task via VS Code Chat** | **Action:** Use the main **Copilot Chat** panel. **Your Task:** Craft a simple prompt (e.g., `Fix the Mypy issues now`) that successfully initiates the **autonomous workflow** directly from your IDE, resulting in a new Draft Pull Request. |
 | **5.4** | **Review the Iteration** | **Observation:** Monitor the issue timeline and the resulting Pull Request (PR). Observe how the agent iteratively **runs Mypy, fixes one error, commits, and repeats** until Mypy passes, showcasing the power of its autonomous loop. |
@@ -37,3 +37,19 @@ Delegating tasks to the autonomous Coding Agent transforms technical debt into a
 
 * **Copilot Coding Agent:** [Visual Studio Code Documentation: Delegate from Chat](https://code.visualstudio.com/docs/copilot/copilot-coding-agent#_method-2-delegate-from-chat)
 * **About Custom Agents and How to design its Profile:** [GitHub Docs: About custom agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents)
+
+
+
+I am missing an exercise about fix linting issues. Maybe could be an extra section for practicing prompts, like security-audit, lint.. (security-audit is in 2nd section)
+
+Also other exercises that came to my mind:
+- Delete coupling and duplicate code
+ - Find unused clases
+
+
+Time expended:
+1. 40 min
+2. 40 min
+3. 20 min
+4. 20 min
+5. 45 min / 1hour

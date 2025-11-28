@@ -4,15 +4,15 @@
 
 | Step | Feature | Instructions |
 | :--- | :--- | :--- |
-| **1.1** | **Repository Instructions** | 1. **Review:** Open and read the `.github/copilot-instructions.md` file.<br>2. **Chat Panel:** Ask: `@workspace Which file must I create next to satisfy Mandatory Coding Guideline #4, and please provide the command to create it.` **Execute the suggested command.** |
-| **1.2** | **Workspace Awareness (`@workspace` Agent)** | Open the main **Copilot Chat** panel. Ask: `@workspace what are the two main dependencies listed in pyproject.toml and what is the required Python version?` |
+| **1.1** | **Repository Instructions** | 1. **Review:** Open and read the `.github/copilot-instructions.md` file.<br>2. **Copilot Chat Panel:** Ask: `@workspace Which file must I create next to satisfy Mandatory Coding Guideline #4, and please provide the command to create it.` **Execute the suggested command.** |
+| **1.2** | **Workspace Awareness (`@workspace` Agent)** | Open the main **Copilot Chat** panel. Ask: `@workspace what are the two main dependencies listed in pyproject.toml and what is the required Python version?` <- should we mention operating system? I got this output ^touch app/models.py^ which is not working in powershell|
 | **1.3** | **Terminal Help (`@terminal` Agent)** | Open a terminal in VS Code. Use the chat panel and ask: `@terminal I need to create a new branch named 'feature/calc-fix'. Provide the exact git command for this.` Execute the suggested command. The prefix instructs the AI to generate the appropriate shell command.|
 | **1.4** | **Editor Diagnostics (`@vscode` Agent)** | 1. **Action:** Introduce a small syntax error in `app/main.py`.<br>2. In the **Copilot Chat** panel, ask: `@vscode what problems are currently reported in this file?`<br>3. Next, ask: `@vscode open the Problems panel.`<br>4. Ask `@vscode can you automatically fix this issue?`<br>Notice its limitations. |
-| **1.5** | **General Context-Aware Chat** | In the main **Copilot Chat** window, ask: `Based on the repository's files, what is the required location for new Pydantic models and what is the rule for function signatures?` |
+| **1.5** | **General Context-Aware Chat** | In the main **Copilot Chat** window, ask: `@workspace  Based on the repository's files, what is the required location for new Pydantic models and what is the rule for function signatures?` |
 | **1.6** | **Global Context Completions** | Open the newly created **`app/models.py`** file. Type: `class OrderResponse(BaseModel):`. Let Copilot complete the class with appropriate fields (e.g., `total_price: float`). Observe how Copilot infers fields using repository-level context. Accept or refine its suggestion. |
 | **1.7** | **Chat Variable (`#selection`)** | Open `app/main.py`. **Select** only the `calculate_total` function. Use the main **Copilot Chat** panel and ask: `What are the parameters and return type for #selection and is there a type hint error?` |
 | **1.8** | **Chat Variable (`#file`)** | Use the main **Copilot Chat** panel. Ask: `In the function defined in #file:app/main.py, what is the current logic error in the 'calculate_total' function?` |
-| **1.9** | **Deep Workspace Search (`@workspace`)** | Use the main **Copilot Chat** panel. Ask: `@workspace Which file contains the Pydantic models, and which file contains the main FastAPI application?` Observe that @workspace answers by scanning file contents — it’s aware of code structure, not just filenames. |
+| **1.9** | **Deep Workspace Search (`@workspace`)** | Use the main **Copilot Chat** panel. Ask: `@workspace Which file contains the Pydantic models, and which file contains the main FastAPI application?` Observe that @workspace answers by scanning file contents — it’s aware of code structure, not just filenames. /// should we wrap up all @worskpace together, seems like mixed up. 
 
 ---
 

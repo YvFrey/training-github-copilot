@@ -17,11 +17,13 @@ Please ensure the following items are verified *before* the start of the hands-o
 
 -  **GitHub Copilot License**: Copilot Pro or Business/Enterprise tied to your GitHub account
 - **Visual Studio Code**: Recommended: latest stable VS Code to ensure agent/chat features are available
-- **Required Extensions**: Install: GitHub Copilot and GitHub Pull Requests & Issues extensions
-- **`uv` Package Manager** : The `uv` utility is required for fast environment and dependency management
+- **Required Extensions**: Install: GitHub Copilot and GitHub Pull Requests & Issues extensions https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
+- **`uv` Package Manager** : The `uv` utility is required for fast environment and dependency management  
+mac: curl -LsSf https://astral.sh/uv/install.sh | sh
+windows: powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
 - **Git Configuration**: Ensure your local `git` client is configured with your correct user name and email
 
----
 
 ## 🚀 Getting Started: Running the FastAPI App
 
@@ -34,8 +36,7 @@ uv sync
 uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-The app will normally be available at: http://127.0.0.1:8000
-
+The app will normally be available at: http://127.0.0.1:8000 ---- maybe add directly docs url or UI otherwise is weird open a not found page
 ---
 
 ### Verify Copilot
