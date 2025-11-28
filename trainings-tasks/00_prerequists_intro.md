@@ -38,10 +38,9 @@ The app will normally be available at: http://127.0.0.1:8000
 
 ---
 
-### Verify Copilot and API docs
+### Verify Copilot
 
 - Verify Copilot: Open the Copilot Chat panel in VS Code and ask a project-aware question such as: "What is the main purpose of this repository?" A coherent response indicates Copilot is active and has access to the workspace.
-- Verify Swagger UI: Open http://127.0.0.1:8000/docs in your browser to view the automatically generated API documentation.
 
 ---
 

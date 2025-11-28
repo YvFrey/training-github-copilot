@@ -1,4 +1,4 @@
-## 🎯 Module V: Agentic Workflow and Customization (The Future)
+## 🎯 Module V: Agentic Workflow
 
 ### 📚 Goal: Master the creation of a Custom Agent
 Delegate an iterative code-quality task using a GitHub Issue, utilizing both GitHub UI and local VS Code delegation methods.
