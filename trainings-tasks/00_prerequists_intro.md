@@ -18,7 +18,7 @@ Please ensure the following items are verified *before* the start of the hands-o
 -  **GitHub Copilot License**: Copilot Pro or Business/Enterprise tied to your GitHub account
 - **Visual Studio Code**: Recommended: latest stable VS Code to ensure agent/chat features are available
 - **Required Extensions**: Install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Pull Requests & Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extensions in VS Code
--  **`uv` Package Manager**: The `uv` utility is required for fast environment and dependency management. Install from the official guide: [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
+-  **`uv` Package Manager**: The `uv` utility is required for fast environment and dependency management: [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
 - **Git Configuration**: Ensure your local `git` client is configured with your correct user name and email
 
 ---
@@ -46,11 +46,11 @@ The Swagger Userinterface will now be available at: http://127.0.0.1:8000/docs
 
 ## 🗺️ Learning path (modules)
 
-- Module I — Context & Control: precise prompting and workspace context
-- Module II — Dynamic Interaction: completions, Inline Chat, and prompt files
-- Module III — Version Control & Quality: integrating Copilot into SCM and reviews
-- Module IV — Testing Framework: automating tests and policy checks
-- Module V — Agentic Workflows: delegating and supervising autonomous agents
+- Module I — Context & Control: Precise Prompting and Workspace Awareness
+- Module II — Dynamic Interaction: Completions, Inline Chat, Chat Panel, Terminal
+- Module III — Version Control & Quality: Integrate into Git workflows
+- Module IV — Testing Framework: Automating Tests and Policy Checks
+- Module V — Agentic Workflows: Delegating and Supervising Autonomous Agents
 
 ---
 

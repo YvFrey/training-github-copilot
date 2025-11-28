@@ -1,4 +1,4 @@
-## 🎯 Module I: Proving Context and Enhancing Focus
+## 🎯 Module I: Context and Control
 
 ### 📚 Goal: Understand how explicit context (instructions and chat variables) dictate the quality and scope of Copilot's suggestions.
 
