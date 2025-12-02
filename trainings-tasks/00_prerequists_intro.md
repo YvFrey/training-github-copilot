@@ -36,7 +36,7 @@ uv sync
 uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-The Swagger Userinterface will now be available at: http://127.0.0.1:8000/docs
+The Swagger UI will now be available at: http://127.0.0.1:8000/docs
 
 ---
 
@@ -49,8 +49,8 @@ The Swagger Userinterface will now be available at: http://127.0.0.1:8000/docs
 ## 🗺️ Learning path (modules)
 
 - Module I — Context & Control: Precise Prompting and Workspace Awareness
-- Module II — Dynamic Interaction: Completions, Inline Chat, Chat Panel, Terminal
-- Module III — Version Control & Quality: Integrate into Git workflows
+- Module II — Dynamic Interaction Modes: Completions, Inline Chat, Chat Panel, Terminal
+- Module III — Version Control & Quality: Git Workflow Integration
 - Module IV — Testing Framework: Automating Tests and Policy Checks
 - Module V — Agentic Workflows: Delegating and Supervising Autonomous Agents
 
