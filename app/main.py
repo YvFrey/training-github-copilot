@@ -9,7 +9,7 @@ class Item(BaseModel):
     price: float
     quantity: int
 
-def calculate_total(price: float, quantity: int) -> int:
+def calculate_total(price: float, quantity: int) -> float:
     # BUG: Logic is incorrect. Should be price * quantity * 1.10
     return (price + quantity) + 1.10 
 
