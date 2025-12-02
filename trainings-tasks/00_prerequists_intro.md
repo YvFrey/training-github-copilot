@@ -16,11 +16,13 @@ We encourage you to discuss actively with your colleagues during the session, an
 Please ensure the following items are verified *before* the start of the hands-on session.
 
 -  **GitHub Copilot License**: Copilot Pro or Business/Enterprise tied to your GitHub account
-- **Visual Studio Code**: Recommended: latest stable VS Code to ensure agent/chat features are available
+   -  **Use the 30-day free trial** — [Sign up for the 30-day free trial for GitHub Copilot Pro](https://github.com/github-copilot/pro)
+   -  **Already used the trial?** — Contact us so we can find a solution.
+- **Visual Studio Code**: Recommended to use latest stable VS Code to ensure agent/chat features are available
 - **Required Extensions**: Install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Pull Requests & Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extensions in VS Code
 -  **`uv` Package Manager**: The `uv` utility is required for fast environment and dependency management: [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
 - **Git Configuration**: Ensure your local `git` client is configured with your correct user name and email
-
+- **Code Base**: Fork the [course repository](https://github.com/YvFrey/training-github-copilot/tree/main) to your own GitHub account (use the "Fork" button on GitHub). Clone your project locally. This setup ensures you have all necessary permissions.
 ---
 
 ## 🚀 Getting Started: Running the FastAPI App
