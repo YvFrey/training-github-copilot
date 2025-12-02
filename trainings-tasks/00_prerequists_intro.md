@@ -13,7 +13,7 @@ We encourage you to discuss actively with your colleagues during the session, an
 
 ### 📋 Prerequisites Checklist
 
-Please ensure the following items are verified *before* the start of the hands-on session.
+To ensure a smooth session, please ensure the following items are verified *before* the start of the hands-on session:
 
 -  **GitHub Copilot License**: Copilot Pro or Business/Enterprise tied to your GitHub account
    -  **Use the 30-day free trial** — [Sign up for the 30-day free trial for GitHub Copilot Pro](https://github.com/github-copilot/pro)
@@ -23,6 +23,15 @@ Please ensure the following items are verified *before* the start of the hands-o
 -  **`uv` Package Manager**: The `uv` utility is required for fast environment and dependency management: [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
 - **Git Configuration**: Ensure your local `git` client is configured with your correct user name and email
 - **Code Base**: Fork the [course repository](https://github.com/YvFrey/training-github-copilot/tree/main) to your own GitHub account (use the "Fork" button on GitHub). Clone your project locally. This setup ensures you have all necessary permissions.
+
+### ⚠️ Important: Feature Alignment and Version Check
+
+Please note that Copilot features evolve **rapidly**, with changes and new features often released on a **weekly basis**. Please excuse if a specific task is not fully up to date or available in your version. This training was tested on the following stable environment. If you encounter errors, verify your version alignment or report the discrepancy to the trainer.
+
+* **VS Code Version:** 1.106.3
+* **GitHub Copilot Extension Version:** github.copilot@1.388.0, github.copilot-chat@0.33.3
+* **Python Environment Manager (uv):** 0.8.10
+
 ---
 
 ## 🚀 Getting Started: Running the FastAPI App
