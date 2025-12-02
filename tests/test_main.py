@@ -7,6 +7,7 @@ in the application, following async/await patterns and FastAPI best practices.
 
 import pytest
 from httpx import AsyncClient, ASGITransport
+from pydantic import ValidationError
 from app.main import app, calculate_total, Item
 
 
@@ -156,13 +157,13 @@ def test_item_model_valid() -> None:
 
 def test_item_model_validation() -> None:
     """Test Item model validation with invalid data."""
-    with pytest.raises(Exception):  # Pydantic ValidationError
+    with pytest.raises(ValidationError):
         Item(name="Widget", price="invalid", quantity=10)
 
 
 def test_item_model_missing_fields() -> None:
     """Test Item model with missing required fields."""
-    with pytest.raises(Exception):  # Pydantic ValidationError
+    with pytest.raises(ValidationError):
         Item(name="Widget")
 
 
