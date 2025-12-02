@@ -45,3 +45,7 @@ When integrating Copilot into existing codebases, you can **ensure specific rule
 In both cases, Copilot analyzes the existing code and configuration files, creating a draft `.github/copilot-instructions.md` that you can then review and refine with your **Mandatory Coding Guidelines**. You can confirm the file is generated and active: `@workspace summarize the active workspace instructions.` Copilot will quote the main rules from that file if it’s being used correctly.
 
 ---
+
+### 💡 References & Further Reading
+
+* [GitHub Copilot: Repository Instructions](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=webui)

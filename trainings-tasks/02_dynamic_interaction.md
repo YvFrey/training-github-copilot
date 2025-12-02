@@ -1,4 +1,4 @@
-## 🎯 Module II: Dynamic Interaction via Chat Panel, Inline Chat, and Code Completions
+## 🎯 Module II: Dynamic Interaction Modes
 
 ### 📚 Goal: Learn to switch between Copilot’s interaction modes and channels to maximize developer productivity.
 
@@ -23,7 +23,8 @@ Switching modes and channels intentionally improves speed, accuracy, and clarity
 | **2.6** | **Mode Comparison** | 1. **Select** the **entire `calculate_total` function** after swtching the return type to int. <br>2. **Chat Panel:** Submit three times the exact same prompt: `Change the return type of this function.`. Switch between **ASK Mode, EDIT Mode** and **AGENT Mode** and observe the different behavior. |
 | **2.7** | **Inline Chat (`/docs`)** | 1. **Select** the body of `get_status`. <br>2. **Inline Chat**: `/docs add a Google-style docstring explaining the function’s purpose and return value.` |
 | **2.8** | **Inline Terminal (`@terminal`)** | 1. **Open your terminal** and press **`Command/Ctrl + I`** to launch the inline chat. <br>2. **Inline Chat:** `I need to run my FastAPI application using uvicorn with hot-reloading`. Observe how it picks up the terminal agent natively. |
-| **2.9** | **Custom Prompt** | 1. **Review** `security-audit.prompt.md`. **Select** `create_item` in `app/main.py` and run the prompt: `/security-audit`. <br>2. **Create** your own prompt (`my-use-case.prompt.md`). Think about a repetitive task/prompt during your daily coding. Validate the output and refine the prompt. |
+| **2.9** | **Custom Prompt** | 1. **Review** `security-audit.prompt.md`. **Select** `create_item` in `app/main.py` and run the prompt: `/security-audit`. <br>2. **Create** your own prompt (`my-use-case.prompt.md`). |
+| **2.9** | **Challenge: Custom Prompt** | Think about a repetitive task/prompt during your daily coding. Leverage prompting techniques. Validate the output and potentially refine the prompt. |
 
 ---
 
@@ -37,7 +38,7 @@ Prompt Files are how you turn repetitive workflow tasks into standard, reusable 
 
 The most effective way to use Copilot is by **choosing the right mode** and understanding how to provide and switch context: **Change the mode → change the context → change the result.**
 
-#### 💡 1. Core Thinking Modes
+#### 💡 Core Thinking Modes
 
 All interactions fall into one of three conceptual modes, dictating the AI's response style:
 
@@ -45,7 +46,7 @@ All interactions fall into one of three conceptual modes, dictating the AI's res
 * **EDIT Mode** → Rewriting, fixing, or refactoring existing, selected code (e.g., using `/fix`).
 * **AGENT Mode** → Multi-step workflows that coordinate actions or external tools.
 
-#### ⚡ 2. Interaction Channels and Focus
+#### ⚡ Interaction Channels and Focus
 
 | Channel | Focus | Key Use Case |
 | :--- | :--- | :--- |
@@ -53,8 +54,6 @@ All interactions fall into one of three conceptual modes, dictating the AI's res
 | **Inline Chat** | **Local Precision** | Small refactors, documentation (`/docs`), or quick fixes (`/fix`) on selected code. |
 | **Chat Panel** | **Global Reasoning** | Architectural questions, multi-file context, and complex explanations. |
 | **Terminal/CLI** | **Command Execution** | Generating and executing commands for Git, Docker, and shell utilities. |
-
----
 
 ### ⭐ Key Insight: Context = Results
 **Change the mode → change the context → change the result.**
