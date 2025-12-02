@@ -1,8 +1,8 @@
 ## 🎯 Module II: Dynamic Interaction Modes
 
-### 📚 Goal: Learn to switch between Copilot’s interaction modes and channels to maximize developer productivity.
+### 📚 Goal: Learn to switch between Copilot’s interaction modes and channels to maximize developer productivity
 
-Copilot provides three primary interaction channels:
+Copilot provides four primary interaction channels:
 
 * **Code Completions** → Quick scaffolding and filling in code as you type.
 * **Inline Chat (`Ctrl/Cmd + I`)** → Focused, in-place edits and actions on selected code.
@@ -40,11 +40,12 @@ The most effective way to use Copilot is by **choosing the right mode** and unde
 
 #### 💡 Core Thinking Modes
 
-All interactions fall into one of three conceptual modes, dictating the AI's response style:
+All interactions fall into one of three modes, dictating the AI's response style:
 
 * **ASK Mode** → Reasoning, explanations, conceptual questions (e.g., asking `/explain`).
 * **EDIT Mode** → Rewriting, fixing, or refactoring existing, selected code (e.g., using `/fix`).
 * **AGENT Mode** → Multi-step workflows that coordinate actions or external tools.
+* **Plan Mode** → Helps you generate a step‑by‑step plan before coding. [Check out](https://github.blog/changelog/2025-11-18-plan-mode-in-github-copilot-now-in-public-preview-in-jetbrains-eclipse-and-xcode/?utm_source=chatgpt.com) more about the newest feature.
 
 #### ⚡ Interaction Channels and Focus
 

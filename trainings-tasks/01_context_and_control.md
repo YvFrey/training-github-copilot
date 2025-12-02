@@ -1,8 +1,9 @@
 ## 🎯 Module I: Context and Control
 
-### 📚 Goal: Understand how explicit context (instructions and chat variables) dictate the quality and scope of Copilot's suggestions.
+### 📚 Goal: Understand how explicit context (instructions and chat variables) dictate the quality and scope of Copilot's suggestions
 
-### Explicit Context-Awareness
+
+## Exercises: Explicit Context-Awareness
 | Step | Feature | Instructions |
 | :--- | :--- | :--- |
 | **1.1** | **Repository Instructions** | 1. **Review:** Open and read the `.github/copilot-instructions.md` file.<br>2. **Chat Panel: Ask:** `Which file must I create next to satisfy Mandatory Coding Guideline #4, and please provide the command to create it.` Execute the suggested command. |
@@ -12,7 +13,7 @@
 | **1.5** | **Chat Variable (`#selection`)** | 1. Open `app/main.py`. **Select** only the `calculate_total` function. <br>2.**Chat Panel: Ask:** `What are the parameters and return type for #selection and is there a type hint error?` |
 | **1.6** | **Chat Variable (`#file`)** | **Chat Panel: Ask:**: `In the function defined in #file:app/main.py, what is the current logic error in the 'calculate_total' function?` |
 
-### Implicit Context-Awareness
+## Exercises: Implicit Context-Awareness
 | Step | Feature | Instructions |
 | :--- | :--- | :--- |
 | **1.7** | **Context-Aware Chat** | **Chat Panel: Ask:** `Based on the repository's files, what is the required location for new Pydantic models and what is the rule for function signatures?` |

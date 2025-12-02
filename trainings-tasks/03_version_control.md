@@ -1,6 +1,7 @@
 ## 🎯 Module III: Version Control and Quality
 
 ### 📚 Goal: Integrate Copilot's contextual features into Git workflows
+
 Improve commit messages, code review, and branch documentation, while reinforcing the developer's ultimate responsibility for code integrity.
 
 ## Exercises
