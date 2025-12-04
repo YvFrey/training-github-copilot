@@ -7,7 +7,7 @@
 
 ### 📚 Goal
 
-The training is based on a **simple FastAPI application**, manageable by any engineer familiar with foundational programming concepts. We expect everyone to **explore the capabilities and limitations of GitHub Copilot**. You'll learn how to prompt effectively, use agentic features safely, and validate generated code.
+The training is based on a [**simple FastAPI application**](https://fastapi.tiangolo.com), manageable by any engineer familiar with foundational programming concepts. We expect everyone to **explore the capabilities and limitations of GitHub Copilot**. You'll learn how to prompt effectively, use agentic features safely, and validate generated code.
 
 We encourage you to discuss actively with your colleagues during the session, and **manifest your new learned skills** by continuing to practice the concepts outside of the classroom.
 
@@ -34,7 +34,9 @@ Please note that Copilot features evolve **rapidly**, with changes and new featu
 
 ---
 
-## 🚀 Getting Started: Running the FastAPI App
+## 🚀 Getting Started
+
+### Running the FastAPI App
 
 Run the following in the project root to install `uv`, sync the environment, and start the app locally. These commands assume you have a Python environment and `pip` available.
 
