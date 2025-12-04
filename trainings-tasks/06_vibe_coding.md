@@ -1,6 +1,6 @@
 ## 🎯 Module VI: Vibe Coding — The Integrated Exploration Challenge
 
-### 📚 Goal: Implement a functional prototype feature based on a high-value, creative use case, leveraging the Vibe Coding framework
+### 📚 Goal: Implement a functional prototype feature based on a high-value, creative use case
 ---
 
 ### 🧠 Vibe Coding Developer's Framework
@@ -11,8 +11,8 @@ The Vibe Coding steps are your toolkit for maximizing AI productivity.
 * **AI Tool Flexibility:** While this training is designed to strengthen your expertise in **GitHub Copilot**, you have full flexibility on AI tools and pair programmers. Feel free to enhance your workflow by integrating other generative AI tools.
 
 #### I: Vision & Context Architecture
-This phase requires **structured thinking** to define the Product Requirements Document (PRD) and **Context** to preemptively set standards.
-* **Goal:** Never start coding until the vision is clear. Break the problem down into the four thinking levels (**Logical, Analytical, Computational, Procedural**). Always provide the AI with the most detail (rules files, PRDs, and past code).
+This phase requires **structured thinking** to define the Product Requirements and **Context** to preemptively set standards.
+* **Goal:** Never start coding until the vision is clear. Break the problem down into the four thinking levels (**Logical, Analytical, Computational, Procedural**). Always provide the AI with the most detail.
 
 #### II: Standards & Quality Execution
 This phase integrates the actual building of the code with risk mitigation.
@@ -28,13 +28,13 @@ This phase is where systematic engineering skills are applied through continuous
 
 **Mission:** **Be creative!** Choose a simple, non-trivial problem to solve that **could be business-related** and implement the core functionality from scratch. This is your chance to **dive into a new technology** to truly feel the power of AI assistance.
 
-**Tech Stack:** You have **full flexibility**. Choose any language you want, or **challenge yourself** by picking one you are **least familiar with** to see the full benefit of Vibe Coding (e.g., prototype a simple front-end component in Vue if you are a backend Python developer).
+**Tech Stack:** You have **full flexibility**. Choose any language you want, or **challenge yourself** by picking one you are **least familiar with** to see the full benefit of Vibe Coding.
 
 ## Exercises: The Integrated Workflow (Self-Directed)
 
-**Your Task:** Using the **Vibe Coding Developer's Framework** above, guide your chosen AI pair programmer through the entire software development lifecycle to implement your feature.
+**Your Task:** Guide your chosen AI pair programmer through the entire software development lifecycle to implement your feature.
 
-* **Start** by defining and structuring your vision. Use AI!
+* **Start** by defining and structuring your vision.
 * **Generate** the code, tests, and documentation, ensuring you fuel the AI with context and rules.
 * **Finish** by using the debugging principles to correct at least one intentional error and committing your final work.
 
