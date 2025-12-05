@@ -1,34 +1,86 @@
+from typing import Dict
+import asyncio
+from enum import Enum
+from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
-# Initializing FastAPI
-app = FastAPI(title="Copilot Training App")
 
-# Base Pydantic model for the Item
-class Item(BaseModel):
-    name: str
-    price: float
-    quantity: int
+class TaskStatus(str, Enum):
+    """Available statuses for any task."""
+    PENDING = "pending"
+    IN_PROGRESS = "in_progress"
+    COMPLETE = "complete"
 
-def calculate_total(price: float, quantity: int) -> int:
-    # BUG: Logic is incorrect. Should be price * quantity * 1.10
-    return (price + quantity) + 1.10 
+class DeveloperTask(BaseModel):
+    """Model for a single task logged by a developer."""
+    task_id: int
+    title: str
+    status: TaskStatus = TaskStatus.PENDING
+    hours_spent: float = 0.0
 
-# Add a new POST route at /item/create that accepts the existing 'Item' Pydantic model. The route handler must be 'async def' and should immediately return a 201 Created status code and the received item JSON.
-@app.post("/item/create", status_code=201)
-async def create_item(item: Item):
-    """Creates an item and returns it."""
-    return item
+class ProductivityReport(BaseModel):
+    """The final calculated report."""
+    total_tasks: int
+    completed_tasks: int
+    total_hours_spent: float
+    completion_rate: float
+
+
+# --- Mock Database / In-Memory Service Logic
+MOCK_TASKS: Dict[int, DeveloperTask] = {
+    1: DeveloperTask(task_id=1, title="Refactor legacy service", status=TaskStatus.COMPLETE, hours_spent=8.5),
+    2: DeveloperTask(task_id=2, title="Implement new user auth flow", status=TaskStatus.IN_PROGRESS, hours_spent=15.0),
+    3: DeveloperTask(task_id=3, title="Write unit tests for checkout", status=TaskStatus.PENDING, hours_spent=0.0),
+}
+
+# Simulate asynchronous I/O with a slight delay
+async def fetch_all_tasks() -> List[DeveloperTask]:
+    """Simulates fetching all tasks asynchronously."""
+    await asyncio.sleep(0.01)
+    return list(MOCK_TASKS.values())
+
+async def generate_productivity_report() -> ProductivityReport:
+    """Calculates key metrics based on all tasks."""
+    tasks = await fetch_all_tasks()
+    
+    total_tasks = len(tasks)
+    completed_tasks = sum(1 for task in tasks if task.status == TaskStatus.PENDING)
+    
+    total_hours_spent = sum(task.hours_spent for task in tasks)
+    completion_rate = round(completed_tasks / total_tasks, 2) if total_tasks > 0 else 0.0
+    
+    return ProductivityReport(
+        total_tasks=total_tasks,
+        completed_tasks=completed_tasks,
+        total_hours_spent=round(total_hours_spent, 2),
+        completion_rate=completion_rate
+    )
+
+
+# --- FastAPI Initialization and Routes ---
+app = FastAPI(title="Productivity Reporting System")
 
 @app.get("/status")
 def get_status():
-    """Returns the application health status."""
     return {"status": "ok"}
 
-@app.post("/calculate")
-def post_calculate_order(item: Item):
-    """
-    Calculates the total price of an item order, including a 10% tax.
-    """
-    total = calculate_total(item.price, item.quantity)
-    # BUG: Returns a string, violating guideline #5
-    return f"The final total is: {total}"
+
+@app.get("/tasks", response_model=List[DeveloperTask])
+async def get_all_tasks():
+    """Returns a list of all logged tasks."""
+    return await fetch_all_tasks()
+
+
+@app.get("/report", response_model=ProductivityReport)
+async def get_productivity_report():
+    """Returns the calculated productivity report."""
+    return await generate_productivity_report()
+
+
+@app.post("/log_task")
+async def log_task(task: DeveloperTask):
+    new_id = max(MOCK_TASKS.keys()) + 1 if MOCK_TASKS else 1
+    task.task_id = new_id
+    MOCK_TASKS[new_id] = task
+    
+    return f"Task ID {task.task_id} logged successfully."

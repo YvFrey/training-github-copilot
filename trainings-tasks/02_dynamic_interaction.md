@@ -15,16 +15,15 @@ Switching modes and channels intentionally improves speed, accuracy, and clarity
 
 | Step | Feature | Instructions |
 | :--- | :--- | :--- |
-| **2.1** | **Code Completions** | 1. In `app/main.py` above the `/status` route **type:** `# Add a new POST route /item/create that accepts the existing 'Item' Pydantic model. The route handler should immediately return the received item as JSON`. <br>2. Open `Copilot: Open Completions Panel` and iterate through suggestions. Once accepted ensure the comment is deleted. <br> **Hint:** If you don't know how to open the right tool use `@vscode` agent.|
-| **2.2** | **Inline Chat (`/fix`)** | 1. **Select**  the `post_calculate_order` function. <br>2. **Inline Chat**: `/fix this route to validate and return the calculated total using the 'OrderResponse' Pydantic model` |
-| **2.3** | **Chat Panel (`/fix`)** | 1. **Select** the entire **`calculate_total`** function.  <br>2.**Chat:** `/fix the bug of the function` |
-| **2.4** | **Chat Panel (`/explain`)** | 1. **Select**  the `calculate_total` function. <br>2.**Chat: Ask:** `/explain this function to a junior developer. Focus on the math and correct return type, referencing its usage in the '/calculate' endpoint` |
-| **2.5** | **Inline Chat (Selection)** | 1. **Select** the `create_item` function. <br>2. **Inline Chat**: `Explain this code in a single sentence.` Observe how it provides an in-place, focused explanation. |
-| **2.6** | **Mode Comparison** | 1. **Select** the **entire `calculate_total` function** after changing the return type to int. <br>2. **Chat:** Submit three times the exact same prompt: `Change the return type of this function`. Switch between **ASK Mode, EDIT Mode** and **AGENT Mode** and observe the different behavior. |
-| **2.7** | **Inline Chat (`/docs`)** | 1. **Select** the body of `get_status`. <br>2. **Inline Chat**: `/docs add a Google-style docstring explaining the function’s purpose and return value` |
-| **2.8** | **Inline Terminal (`@terminal`)** | 1. **Open your terminal** and press **`Command/Ctrl + I`** to launch the inline chat. <br>2. **Inline Chat:** `I need to run my FastAPI application using uvicorn with hot-reloading`. Observe how it picks up the terminal agent natively. |
-| **2.9** | **Custom Prompt** | 1. **Review** `security-audit.prompt.md`. **Select** `create_item` in `app/main.py` and run the prompt: `/security-audit`. <br>2. **Create** your own prompt. |
-| **2.9** | **Challenge: Custom Prompt** | Think about a repetitive task/prompt during your daily coding. Leverage a prompting framework of your choice. Validate the output and potentially refine the prompt. |
+| **2.1** | **Code Completions** | 1. In `app/main.py` **type:** `# Add a new GET route /task/1/status that accepts a task_id path parameter and returns the status of that task`. <br>2. Open `Copilot: Open Completions Panel` and iterate through suggestions. Once accepted ensure the comment is deleted. <br> **Hint:** If you don't know how to open the right tool use `@vscode` agent.|
+| **2.2** | **Inline Chat (`/fix`)** | You notice that something seems to be off with the calculation of the `generate_productivity_report`. <br>1. **Select**  the entire `generate_productivity_report` function. <br>2. **Inline Chat**: `/fix calculation` <br>3. Evaluate the proposed fix. The function's name and internal docstring provide critical context. |
+| **2.3** | **Chat Panel (`/explain`)** | 1. **Select**  the `generate_productivity_report` function. <br>2.**Chat: Ask:** `/explain the steps of the function` |
+| **2.4** | **Inline Chat (Selection)** | 1. **Select** the `generate_productivity_report` function. <br>2. **Inline Chat**: `Explain this code in a single sentence.` Observe how it provides an in-place, focused explanation. |
+| **2.5** | **Mode Comparison** | 1. **Select** the `generate_productivity_report` function. <br>2. **Chat:** Submit three times the exact same prompt: `Add clear, specific type hints to the return variables within this function`. Switch between **ASK Mode, EDIT Mode** and **AGENT Mode** and observe the different behavior. |
+| **2.6** | **Inline Chat (`/doc`)** | 1. **Select** in `app/main.py` the function `log_task`. <br>2. **Inline Chat**: `/doc` <br>3. You can enhance the internal prompt in case you want a specific format.|
+| **2.7** | **Inline Terminal (`@terminal`)** | 1. **Open your terminal** and press **`Command/Ctrl + I`** to launch the inline chat. <br>2. **Inline Chat:** `I need to run my FastAPI application using uvicorn with hot-reloading`. Observe how it picks up the terminal agent natively. |
+| **2.8** | **Custom Prompt** | 1. **Review** `security-audit.prompt.md`. **Select** `create_item` in `app/main.py` and run the prompt: `/security-audit`. <br>2. **Create** your own prompt. |
+| **2.9** | **Challenge: Custom Prompt** | Think about a repetitive task in your daily coding; choose a prompting framework to craft a reusable prompt and integrate it seamlessly into your workflow, then validate the output and refine the prompt as needed. |
 
 ---
 
@@ -58,8 +57,6 @@ All interactions fall into one of following modes, dictating the AI's response s
 | **Terminal/CLI** | **Command Execution** | Generating and executing commands for Git, Docker, and shell utilities. |
 
 ### ⭐ Key Insight: Context = Results
-**Change the mode → change the context → change the result.**
-
 The ultimate insight is that **the input channel acts as the primary router** for your query, dictating which specialized agent or tool handles the request. Copilot is engineered to be a powerful problem-solver, adept at handling complex tasks and quickly grasping the right context, but the human must guide the interaction.
 
 1.  **Channel is the Router:** The channel you use (Inline Chat, Terminal, or Chat Panel) is the first factor that determines the AI's scope and focus.
