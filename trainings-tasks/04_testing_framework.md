@@ -17,9 +17,6 @@ Copilot can leverage **global instruction files** and **custom prompts** to unde
 ---
 
 ### 🧠 Lesson Learned: Context-Driven Test Generation
-
-- Copilot relies on **instruction files** to understand your project’s rules and structure.  
 - **Enhancing instructions** ensures AI-generated tests are consistent, correctly placed, and follow naming conventions, fixtures, and framework standards.  
-- **Custom prompts** let you automate repetitive workflows and enforce project-specific patterns.  
 - **Prompt precision matters:** Even with instruction files, carefully worded prompts avoid scope creep or unintended outputs.  
 

@@ -12,19 +12,19 @@
 | :--- | :--- | :--- |
 | **5.1** | **Agent Profile** | 1. **Review** the custom agent profile: **.github/agents/MypyFixer.md**. <br>2. Confirm there are Mypy type errors present in the codebase (e.g., in `app/main.py`) but do not fix them. |
 | **5.2** | **Delegation via GitHub Issue** | 1. Go to your repository's **Issues** tab on GitHub and create a new issue. e.g. titled: **`@copilot Request: Fix All Outstanding Mypy Errors of the App`**.<br> 2. **Assign** this new issue to the **`@copilot`** agent. <br>3. Use the custom agent profile dropdown to select **`MypyFixer`**. |
-| **5.3** | **Delegation via VS Code Chat** | **Chat Panel: MyPyFixer:** Create a simple prompt that initiates the **autonomous workflow** directly from your IDE using the selected agent, resulting in a new PR. Click the cloud icon next to the send button and select the **`GitHub Copilot Cloud Agent`**.|
+| **5.3** | **Delegation via VS Code Chat** | **Chat: MyPyFixer:** Create a simple prompt that initiates the **autonomous workflow** directly from your IDE using the selected agent, resulting in a new PR. Click the cloud icon next to the send button and select the **`GitHub Copilot Cloud Agent`**.|
 | **5.4** | **Review the Iteration** | Monitor the issue timeline and the resulting Pull Requests. Observe how the agent iteratively runs mypy, fixes one error, commits, and repeats until mypy passes, showcasing the power of its autonomous loop. |
 | **5.5** | **Optional: Delegation via GitHub CLI** | Make sure the GitHub CLI is installed. Delegate the task via the command line: **`gh issue create --title "@copilot Request: Refactor the /calculate endpoint" --assignee @copilot`** |
 | **5.6** | **Challenge: Design Your Own Agent** | Design and create a new custom agent profile: **`.github/agents/YourAgentName.md`**. Delegate a new task to this Agent while you can focus on the next feature development. |
-| **5.7** | **Optional: Run Agent Locally** | **Chat Panel:** Create a simple prompt to assign a task to any of your defined agents. Click the cloud icon next to the send button and select the GitHub Copilot CLI Agent.|
+| **5.7** | **Optional: Run Agent Locally** | **Chat:** Create a simple prompt to assign a task to any of your defined agents. Click the cloud icon next to the send button and select the GitHub Copilot CLI Agent.|
 ---
 
 ### 🧠 Lesson Learned: Agentic Autonomy and Delegation
 
 Delegating tasks to the autonomous Coding Agent transforms technical debt into an automated, scalable workflow, allowing developers to focus their time on complex feature development.
 
-* **Autonomy is Key:** ☁️ The **Coding Agent** (triggered via **`@copilot`** or the local Chat interface) is the only Copilot functionality that runs **asynchronously**, commits changes, and opens a Pull Request *autonomously*. This is the definition of the **Agentic Workflow**.
-* **Scalability:** 🚀 The system supports concurrent task execution, allowing multiple colleagues to assign fix-it tasks simultaneously.
+* **Autonomy is Key:** ☁️ The **Coding Agent** is the only Copilot functionality that runs **asynchronously**, commits changes, and opens a Pull Request *autonomously*. This is the definition of the **Agentic Workflow**.
+* **Scalability:** 🚀 The system supports concurrent task execution, allowing multiple colleagues to assign tasks simultaneously.
 
 ---
 

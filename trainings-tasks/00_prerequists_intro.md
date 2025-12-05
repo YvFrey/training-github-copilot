@@ -5,8 +5,6 @@
 
 ## 🎯 Module 00: Prerequisites and Developer Responsibility
 
-### 📚 Goal
-
 The training is based on a [**simple FastAPI application**](https://fastapi.tiangolo.com), manageable by any engineer familiar with foundational programming concepts. We expect everyone to **explore the capabilities and limitations of GitHub Copilot**. You'll learn how to prompt effectively, use agentic features safely, and validate generated code.
 
 We encourage you to discuss actively with your colleagues during the session, and **manifest your new learned skills** by continuing to practice the concepts outside of the classroom.
@@ -15,13 +13,12 @@ We encourage you to discuss actively with your colleagues during the session, an
 
 To ensure a smooth session, please ensure the following items are verified *before* the start of the hands-on session:
 
--  **GitHub Copilot License**: Copilot Pro or Business/Enterprise tied to your GitHub account
+-  **GitHub Copilot License**:
    -  **Use the 30-day free trial** — [Sign up for the 30-day free trial for GitHub Copilot Pro](https://github.com/github-copilot/pro)
    -  **Already used the trial?** — Contact us so we can find a solution.
 - **Visual Studio Code**: Recommended to use latest stable VS Code to ensure agent/chat features are available
 - **Required Extensions**: Install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Pull Requests & Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extensions in VS Code
 -  **`uv` Package Manager**: The `uv` utility is required for fast environment and dependency management: [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
-- **Git Configuration**: Ensure your local `git` client is configured with your correct user name and email
 - **Code Base**: Fork the [course repository](https://github.com/YvFrey/training-github-copilot/tree/main) to your own GitHub account (use the "Fork" button on GitHub). Clone your project locally. This setup ensures you have all necessary permissions.
 
 ### ⚠️ Important: Feature Alignment and Version Check
@@ -64,6 +61,7 @@ The Swagger UI will now be available at: http://127.0.0.1:8000/docs
 - Module III — Version Control & Quality: Git Workflow Integration
 - Module IV — Testing Framework: Automating Tests and Policy Checks
 - Module V — Agentic Workflows: Delegating and Supervising Autonomous Agents
+- Module VI — Vibe Coding: The Integrated Exploration Challenge
 
 ---
 
