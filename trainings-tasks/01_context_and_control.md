@@ -8,7 +8,7 @@
 | :--- | :--- | :--- |
 | **1.1** | **Repository Instructions** | 1. **Review:** Open and read the `.github/copilot-instructions.md` file.<br>2. **Chat: Ask:** `Which file must I create next to satisfy Mandatory Coding Guidelines, and please provide the command to create it` Execute the suggested command. |
 | **1.2** | **Workspace Awareness (`@workspace` Agent)** | **Chat: Ask:** `@workspace what are the two main dependencies listed in pyproject.toml and what is the required Python version?` |
-| **1.3** | **Terminal Help (`@terminal` Agent)** | **Chat: Ask:** `@terminal I need to checkout the branch 'bug/diagnostics-error'.` Execute the suggested command. |
+| **1.3** | **Terminal Help (`@terminal` Agent)** | **Chat: Ask:** `@terminal checkout branch 'bug/diagnostics-error'.` Execute the suggested command. |
 | **1.4** | **Editor Diagnostics (`@vscode` Agent)** | 1. Introduce a small syntax error in `app/main.py`. <br>2. **Chat: Ask:** `@vscode what problems are currently reported in this file?`<br>3. Ask: `@vscode open the Problems panel.`<br>4. Ask: `@vscode can you please fix this issue?` Notice its limitations. |
 | **1.5** | **Chat Variable (`#selection/#file`)** | 1. Open `app/main.py`. **Select** only the `log_task` function. <br>2.**Chat: Ask:** `What is the issue with #selection?` |
 
